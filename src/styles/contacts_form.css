@@ -1,0 +1,26 @@
+.FORM>.subject>input {
+  width: calc(100% - 2rem)
+}
+
+.FORM>.Message>textarea {
+  width: calc(100% - 2rem);
+  margin-block-end: 2rem;
+}
+
+.FORM>button {
+  width: 100%;
+  padding-block: 1rem;
+  border-radius: 100vh;
+  border: 2px solid var(--border);
+  background-color: var(--background);
+  color: var(--text);
+  transition: all 200ms;
+}
+
+.FORM>button:hover,
+.FORM>button:active,
+.FORM>button:focus {
+  background-color: var(--text);
+  color: var(--background);
+  outline: none;
+}

@@ -1,0 +1,165 @@
+{
+    "info": {
+        "name": "Nayan Pawar",
+        "email": "nayanpawar136@gmail.com",
+        "phone": "+91 9819658897",
+        "position": "Computer Engineer",
+        "location": "Mumbai, Maharashtra, India",
+        "about": "A Computer Engineering student skilled in full-stack development with strong interests in Artificial Intelligence, leadership, and management. Passionate about learning new technologies, leading teams, and building robust, scalable, and impactful software solutions.",
+        "careerGoals": "To pursue a career in software engineering with a focus on innovation, AI-driven solutions, and problem-solving at scale."
+    },
+    "socials": [
+        {
+            "type": "email",
+            "url": "nayanpawar136@gmail.com"
+        },
+        {
+            "type": "linkedIn",
+            "url": "https://www.linkedin.com/in/nayan-pawar03/"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/Nayanpawar03"
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Technology in Computer Engineering",
+            "specialization": "Honours in Artificial Intelligence",
+            "institution": "Vidyalankar Institute of Technology, Wadala",
+            "graduation_date": "2026",
+            "cgpa": 9.96
+        }
+    ],
+    "experience": {
+        "work": [
+            {
+                "role": "AI & Cloud Research Intern",
+                "organization": "Kloudineer Technologies Pvt. Ltd.",
+                "duration": "Oct 2025 – Present",
+                "responsibilities": [
+                    "Researched and created technical content on AI/ML, Generative AI, and Cloud AI platforms (AWS, Azure, GCP, Databricks, NVIDIA).",
+                    "Contributed to building AI copilots and intelligent agents for enterprise use cases and internal training.",
+                    "Conducted guided research on Artificial General Intelligence (AGI) and documented findings."
+                ]
+            }
+        ],
+        "internships": [],
+        "other_roles": [
+            {
+                "role": "Member",
+                "organization": "Google Developer Groups (GDG) — VIT",
+                "duration": "Oct 2024 – Jul 2025",
+                "responsibilities": [
+                    "Helped organize developer events and coding bootcamps including Flutter Roadshow Mumbai.",
+                    "Assisted in planning and executing large-scale tech events with 150+ participants.",
+                    "Created promotional content to increase engagement and social media reach."
+                ]
+            }
+        ]
+    },
+    "projects": [
+        {
+            "name": "CensorPRO",
+            "description": "An AI-powered content moderation platform for text and images with role-based access control.",
+            "imgUrl": "/images/censorpro.png",
+            "duration": "2024",
+            "type": [
+                "All",
+                "Web",
+                "AI"
+            ],
+            "keywords": [
+                "React.js",
+                "Node.js",
+                "Express.js",
+                "PostgreSQL",
+                "DistilBERT",
+                "SightEngine API",
+                "Content Moderation",
+                "AI"
+            ],
+            "src": "https://github.com/Nayanpawar03",
+            "url": ""
+        },
+        {
+            "name": "EduAI",
+            "description": "An AI-driven learning path platform providing personalized resources, progress tracking, gamification, and community features.",
+            "imgUrl": "/images/edu_ai.png",
+            "type": [
+                "All",
+                "Web",
+                "AI"
+            ],
+            "keywords": [
+                "React.js",
+                "Express.js",
+                "MongoDB",
+                "Firebase",
+                "Python",
+                "TensorFlow",
+                "AI",
+                "Gamification"
+            ],
+            "src": "https://github.com/Nayanpawar03/EduAI.git",
+            "url": ""
+        },
+        {
+            "name": "Attrition Forecast",
+            "description": "Attrition Forecast helps organizations predict employee turnover using advanced analytics and AI. Understand key factors driving attrition and take proactive steps to retain your top talent.",
+            "imgUrl": "/images/employee_attrition.png",
+            "type": [
+                "All",
+                "Web"
+            ],
+            "keywords": [
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Flask",
+                "AI Integration",
+                "NGO Platform"
+            ],
+            "src": "https://github.com/Raj-Patkar/Employee-Attrition",
+            "url": ""
+        }
+    ],
+    "technicalSkills": {
+        "languages": [
+            "JavaScript",
+            "Python",
+            "Java",
+            "C",
+            "C++"
+        ],
+        "webDevelopment": [
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "Tailwind CSS",
+            "MongoDB",
+            "PostgreSQL"
+        ],
+        "technologies": [
+            "Cloud Computing",
+            "REST APIs",
+            "CI/CD",
+            "Git",
+            "GitHub"
+        ],
+        "tools": [
+            "Postman",
+            "Figma",
+            "Jira",
+            "ClickUp"
+        ]
+    },
+    "certifications": [
+        "NISM – Wealth Creation and Securities Market",
+        "TCS iON Career Edge – Young Professional"
+    ],
+    "hobbies": [
+        "Calisthenics",
+        "Drawing"
+    ]
+}

@@ -1,0 +1,13 @@
+@media screen and (min-width:768px) {
+.close-btn {
+  transform: translateY(-100%);
+  animation: footer linear;
+  animation-timeline: view();
+}
+
+@keyframes footer {
+  to {
+      transform: translateY(1000%);
+  }
+}
+}

@@ -1,0 +1,59 @@
+.cliHeaderParent {
+  --cliHeader-height: 26px;
+
+  --cli-color-first: rgba(71, 85, 105, 1);
+  --cli-color-second: rgb(245, 169, 127);
+  --cli-color-third: rgb(166, 218, 149);
+  --cli-color-fourth: rgb(139, 213, 202);
+  --cli-color-fifth: rgb(138, 173, 244);
+  --cli-color-last: rgb(245, 189, 230);
+
+  height: var(--cliHeader-height);
+  border-radius: 10px;
+  background-color: var(--cli-color-last);
+  max-width: max-content;
+  display: flex;
+}
+
+.cliHeaderParent>* {
+  height: var(--cliHeader-height);
+  padding-inline-start: 20px;
+  padding-inline-end: 13px;
+}
+
+.cliHeaderParent>*::after {
+  content: '';
+  position: absolute;
+  width: 19px;
+  aspect-ratio: 1/1;
+  transform: translateX(3.5px) translateY(3.5px) rotate(45deg);
+  border-radius: 1px;
+  background-color: inherit;
+}
+
+
+.firstLine {
+  font-weight: bold;
+  border-radius: 10px 0 0 10px;
+  background-color: var(--cli-color-first);
+}
+
+.secondLine {
+  color: black;
+  background-color: var(--cli-color-second);
+}
+
+.thirdLine {
+  padding-inline-start: 15px;
+  background-color: var(--cli-color-third);
+}
+
+.fourthLine {
+  padding-inline-start: 15px;
+  background-color: var(--cli-color-fourth);
+}
+
+.fifthLine {
+  padding-inline-start: 15px;
+  background-color: var(--cli-color-fifth);
+}

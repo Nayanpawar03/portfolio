@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #181818;
+  --navbar-border: rgba(0, 0, 0, 0.1);
+  --navbar-height: 5rem;
+
+  scroll-padding-top: var(--navbar-height);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #181818;
+    --foreground: #ededed;
+    --navbar-background: #181818;
+    --navbar-border: rgba(255, 255, 255, 0.2);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: clip;
+}
+
+#Terminal {
+  animation: fadeInAnimation ease-out 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+:root {
+  --text: #1d1d1d;
+  --background: #f1f3f5;
+  --background-diff: #fff;
+  --primary: rgba(0, 0, 0, 0.05);
+  --accent: #c9f31d;
+  --border: rgba(0, 0, 0, 0.1);
+  --padding-section: 4rem;
+  --logo: url("/images/logo-dark.png");
+  --shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+
+  scroll-padding-top: 4rem;
+  /* typography
+
+/*extra large font size*/
+  --fs-xl: clamp(1rem, 5vw + 1rem, 5rem);
+  /*medium font size*/
+  --fs-600: clamp(0.80rem, 2vw + 1rem, 3rem);
+  /*base font size*/
+  --fs-400: clamp(0.60rem, 1vw + 1rem, 2.5rem);
+  /* small font size */
+  --fs-200: clamp(0.40rem, 0.5vw + 1rem, 2rem);
+  /* xs font size */
+  --fs-xs: clamp(0.9rem, 0.01vw + 1rem, 1rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fff;
+    --background: #1d1d1d;
+    --background-diff: #1a1a1a;
+    --primary: rgba(255, 255, 255, 0.05);
+    --accent: #c9f31d;
+    --border: rgba(255, 255, 255, 0.1);
+    --logo: url("/images/logo-light.png");
+    --shadow: rgba(255, 255, 255, 0.05) 0px 2px 8px;
+  }
+}
+
+body.light {
+  --text: #1d1d1d;
+  --background: #f1f3f5;
+  --background-diff: #fff;
+  --primary: rgba(0, 0, 0, 0.05);
+  --accent: #c9f31d;
+  --border: rgba(0, 0, 0, 0.1);
+  --padding-section: 4rem;
+  --logo: url("/images/logo-dark.png");
+  --shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+}
+
+body.dark {
+  --text: #fff;
+  --background: #1d1d1d;
+  --background-diff: #1a1a1a;
+  --primary: rgba(255, 255, 255, 0.05);
+  --accent: #c9f31d;
+  --border: rgba(255, 255, 255, 0.1);
+  --logo: url("/images/logo-light.png");
+  --shadow: rgba(255, 255, 255, 0.05) 0px 2px 8px;
+}
+
+
+.container {
+  --padding-inline: 1rem;
+  --content-max-width: 135ch;
+  --breakout-max-width: 145ch;
+  /*actual width of breakout content*/
+
+  --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(100% - (var(--padding-inline) * 2), var(--content-max-width)) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+
+
+/* position utilities */
+.container>* {
+  grid-column: content;
+}
+
+.container>.breakout {
+  grid-column: breakout;
+}
+
+.container>.full-width {
+  grid-column: full-width;
+}
+
+/* typography utilities */
+.fs-xl {
+  font-size: var(--fs-xl);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-xs {
+  font-size: var(--fs-xs);
+}
+
+span.outline {
+  color: transparent;
+  font-weight: 900;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: var(--text);
+}
+
+/* Color utilities */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+}
+
+.bgcolor {
+  background-color: var(--background);
+}
+
+.bgdiff {
+  background-color: var(--background-diff);
+}
+
+.bgaccent {
+  background-color: var(--accent);
+}
+
+.color {
+  color: var(--text);
+}
+
+.coloraccent {
+  color: var(--accent);
+}
+
+.border {
+  border-color: var(--border);
+}
+
+
+/* flex utilities */
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.place-center {
+  place-content: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* dimension utilities */
+.full-height {
+  height: max(40rem, 100vh - 3.5rem);
+}
+
+.section-padding {
+  padding-block: var(--padding-section);
+}
+
+.section-padding-top {
+  padding-block-start: var(--padding-section);
+}
+
+/* scrollbar  */
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 100vh;
+}
+
+/* makes sure footer remains at the bottom in z index */
+body>* {
+  position: relative;
+  z-index: 2;
+}
+
+footer {
+  z-index: 1;
+}
+
+/* lenis recommended css */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
