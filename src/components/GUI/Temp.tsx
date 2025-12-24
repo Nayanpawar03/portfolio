@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import { FaBars, FaTimes } from "react-icons/fa";
 import Navlink from './Navlink'
 import MenuOverlay from './MenuOverlay';
-import { button } from 'framer-motion/client';
 
 const navLinks = [
   {
@@ -32,18 +31,18 @@ const navLinks = [
 const Temp = () => {
   const [nav, setNav] = useState(false)
 
-  const handleToggle = () => {
-    setNav(prevSet => !prevSet)
-    console.log(nav)
-  }
+  // const handleToggle = () => {
+  //   setNav(prevSet => !prevSet)
+  //   console.log(nav)
+  // }
 
   const logo = useRef<HTMLSpanElement>(null);
 
   function handleHover(div: HTMLSpanElement | any, passedvalue: string) {
     // if (mobile) return
     // if (top) return 
-    let value = passedvalue
-    let Chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    const value = passedvalue
+    const Chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     let iteration = 0
     const myinterval = setInterval(() => {
       div.innerText = div.innerText.split('').map((letter: string, index: number) => {

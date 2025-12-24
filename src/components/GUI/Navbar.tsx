@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { GiBottomRight3dArrow } from "react-icons/gi";
-import { Font } from "three/examples/jsm/Addons.js";
 import '@/styles/navbar.css'
 
 export default function Navbar() {
@@ -13,18 +11,24 @@ export default function Navbar() {
     console.log(nav)
   }
 
-  function handleHover(div: HTMLSpanElement | any, passedvalue: string) {
+  function handleHover(div: HTMLSpanElement | null, passedvalue: string) {
     // if (mobile) return
     // if (top) return 
-    let value = passedvalue
-    let Chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    if (!div) return;
+    const value = passedvalue
+    const Chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     let iteration = 0
     const myinterval = setInterval(() => {
       div.innerText = div.innerText.split('').map((letter: string, index: number) => {
         if (index < iteration) return value[index]
         return Chars[Math.floor(Math.random() * 26)]
       }).join('')
-      value.length < 8 ? iteration += 1 / 4 : iteration += 1 / 5
+      if (value.length < 8) {
+        iteration += 1 / 4;
+      } else {
+        iteration += 1 / 5;
+      }
+
       if (iteration > value.length) clearInterval(myinterval)
     }, 30)
   }
@@ -32,7 +36,7 @@ export default function Navbar() {
   const logo = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (!logo) return
+    if (!logo.current) return
     handleHover(logo.current, "DEVFOLIO")
 
   }, [])
@@ -45,7 +49,7 @@ export default function Navbar() {
           <div className="logo">
             <span style={{ fontFamily: "var(--font-arctic-guardian)", letterSpacing: "0.25rem" }}
               ref={logo}
-              onMouseOver={(e) => handleHover(e.target, "DEVFOLIO")}
+              onMouseOver={() => handleHover(logo.current, "DEVFOLIO")}
             >DevFolio</span>
           </div>
           <button className='nav-toggle' onClick={() => handleToggle()}>

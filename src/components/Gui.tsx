@@ -3,7 +3,6 @@ import Contact from "./GUI/Contact";
 import Cursor from "./GUI/cursor";
 import Footer from "./GUI/Footer";
 import HeroSection from "./GUI/HeroSection";
-import Navbar from "./GUI/Navbar";
 import Projects from "./GUI/Projects";
 import Skills from "./GUI/Skills";
 import Temp from "./GUI/Temp";

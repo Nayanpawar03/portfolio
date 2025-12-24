@@ -59,15 +59,12 @@ export interface PROJECT {
 
 
 export interface EXPERIENCE {
-    role: string
-    orgainzation: string
-    /** must include start and end duration  
-     * 
-     * e.g. 2000 - present | 2000 - 2005
-     */
-    duration: string
-    responsiblities: string[]
+    role: string;
+    organization: string;
+    duration: string;
+    responsibilities: string[];
 }
+
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type DataCollection = INFO | SOCIAL[] | string[] | any
@@ -83,6 +80,11 @@ export interface DATA {
     }
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     education: any
-    technicalSkills: string[]
+    technicalSkills: {
+        languages: string[];
+        webDevelopment: string[];
+        technologies: string[];
+        tools: string[];
+    };
     hobbies?: string[]
 }

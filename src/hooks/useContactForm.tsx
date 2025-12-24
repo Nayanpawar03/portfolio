@@ -11,8 +11,13 @@ interface form {
 interface result {
   form: form,
   submit: boolean,
-  changeHandler: Function,
-  submitHandler: Function,
+  changeHandler: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+
+  submitHandler: (
+    e: React.FormEvent<HTMLFormElement | HTMLButtonElement>
+  ) => void;
 }
 
 export default function useContactForm(): result {
@@ -22,7 +27,7 @@ export default function useContactForm(): result {
 
   const [submit, setSubmit] = useState(false)
 
-  function changeHandler(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) {
+  function changeHandler(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setForm(formData => {
       return (
         {
@@ -33,7 +38,7 @@ export default function useContactForm(): result {
     })
   }
 
-  function submitHandler(e: React.FormEvent<HTMLButtonElement> | React.FormEvent<HTMLFormElement>) {
+  function submitHandler(e: React.FormEvent<HTMLFormElement | HTMLButtonElement>) {
     setSubmit(true)
     e.preventDefault();
     if (process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID === undefined) {
@@ -50,9 +55,9 @@ export default function useContactForm(): result {
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, {
       from_name: form.name,
-      to_name: 'Sahil',
+      to_name: 'Vinay',
       from_email: form.email,
-      to_email: 'sahilsingh7977@gmail.com',
+      to_email: 'nayanpawar136@gmail.com',
       message: "Subject:" + form.subject + "\nmessage:" + form.message
     }, process.env.NEXT_PUBLIC_EMAILJS_API_KEY).then(() => {
       alert('Thank you. for Contacting us we will get back to you as soon as possible.')

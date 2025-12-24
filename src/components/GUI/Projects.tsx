@@ -40,7 +40,7 @@ const Projects = () => {
         {projectTypes.map((type) => (
           <ProjectTag
             key={type}
-            onClick={() => handleCategory(type)}
+            onClick={() => ((nameFromTag: string) => handleCategory(nameFromTag))}
             name={type}
             isSelected={category === type}
           />

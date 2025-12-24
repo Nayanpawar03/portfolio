@@ -18,7 +18,7 @@ function HeroSection() {
           className="col-span-1 mt-12 lg:col-span-7 place-self-center text-center sm:text-left sm:px-12"
         >
           <h1 className="text-white mt-4 text-4xl sm:text-5xl lg:text-7xl font-extrabold ">
-            <span className="text-transparent bg-clip-text  bg-gradient-to-r from-orange-600 to-yellow-400">Hello, I'm{" "}
+            <span className="text-transparent bg-clip-text  bg-gradient-to-r from-orange-600 to-yellow-400">Hello, I&apos;m{" "}
               <br />
             </span>
             <TypeAnimation

@@ -6,7 +6,7 @@ import { RxEyeOpen } from "react-icons/rx";
 interface ProjectCardProps {
   name: string;
   desc: string;
-  imgUrl: string;
+  imgUrl?: string;
   src?: string;
   url?: string;
   duration: string;

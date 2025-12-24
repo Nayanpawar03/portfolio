@@ -6,7 +6,16 @@ const variants = {
   active: { width: "calc(100% - 0.75rem)" },
 }
 
-const TabButton = ({ active, selectTab, children }) => {
+const TabButton = ({
+  active,
+  selectTab,
+  children,
+}: {
+  active: boolean;
+  selectTab: () => void;
+  children: React.ReactNode;
+}) => {
+
   // Add classes for text color and border color based on the active state
   const buttonClasses = active ? "text-[var(--foreground)]" : "text-[#ADB7BE]";
 

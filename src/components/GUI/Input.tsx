@@ -12,7 +12,7 @@ interface input {
   className?: string,
   style?: React.CSSProperties,
   value: string,
-  onChange: Function,
+  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
   required: boolean
 
   rows?: number,
@@ -32,7 +32,7 @@ export default function Input({ name, label, className, style, value, onChange, 
               id={name}
               name={name}
               value={value}
-              onChange={(e) => onChange(e)}
+              onChange={onChange}
               rows={rows ? rows : 8}
               cols={cols}
               style={{ width: "90%" }}
@@ -42,7 +42,7 @@ export default function Input({ name, label, className, style, value, onChange, 
               id={name}
               name={name}
               value={value}
-              onChange={(e) => onChange(e)}
+              onChange={onChange}
               type={type}
               required={required}
             />
