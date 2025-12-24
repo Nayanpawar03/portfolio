@@ -48,8 +48,8 @@ function HeroSection() {
             <button
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "/resume/Nayan_Pawar_Resume.pdf";
-                link.download = "Nayan_Pawar_Resume.pdf";
+                link.href = "/resume/Nayan_Resume.pdf";
+                link.download = "Nayan_Resume.pdf";
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
