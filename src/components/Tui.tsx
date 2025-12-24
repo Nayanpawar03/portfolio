@@ -34,9 +34,11 @@ function matcher(input: string): commands {
             return commands.socials;
         case "project":
             return commands.projects;
+        case "education":
+            return commands.education;
         case "experience":
             return commands.experience;
-        case "skill":
+        case "skills":
             return commands.technicalSkills;
         case "hobbies":
             return commands.hobbies;
